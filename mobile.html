@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Mobile Control</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+
+    <script type="text/javascript">
+        var CLIENT = 'remote';
+    </script>
+</head>
+
+<body>
+<h1>Mobile Control</h1>
+
+<h3>Tilt your phone</h3>
+
+<h5>Connection status</h5>
+<textarea id="output" rows=10 cols="60"></textarea>
+
+
+<!-- TEMPLATES -->
+    
+    <script type="text/html" id="template-socket-connection">
+      <p>Status: <b><%= connected ? 'connected' : 'not connected' %></b></p>
+      <a class="btn btn-primary <%= connected ? 'disabled' : '' %>"><i class="icon-cog icon-white"></i> Connect</a>
+      <a class="btn btn-danger  <%= connected ? '' : 'disabled' %>"><i class="icon-remove icon-white"></i> Disconnect</a>
+    </script>
+
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="/javascripts/backbone.js"></script>
+    <script src="/javascripts/socket.js"></script>
+    <script src="/javascripts/application.js"></script>
+    <script src="/javascripts/controller.js"></script>
+
+  </body>
+</html>
